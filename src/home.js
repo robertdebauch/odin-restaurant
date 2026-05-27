@@ -1,0 +1,1 @@
+export const homepage = "I AM THE HOMEPAGE";

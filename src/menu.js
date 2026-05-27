@@ -1,0 +1,1 @@
+export const menupage = "TAKE YOUR CHOICE SINCE I AM THE MENU";

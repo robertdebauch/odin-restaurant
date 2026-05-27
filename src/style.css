@@ -1,0 +1,53 @@
+:root {
+    --black-color: rgb(0, 0, 0);
+    --white-color: rgb(255,255,255);
+    --grey-color: rgb(65,65,65);
+    --electro-magnetism: rgb(84, 43, 255);
+
+    --text-size-0: 0.625rem;
+    --text-size-1: 1.25rem;
+    --text-size-2: 1.5rem;
+    --text-size-3: 3rem;
+    --text-size-4: 9.75rem;
+}
+
+@font-face {
+    font-family: 'PPNeueMontreal';
+    src: 
+        url('./fonts/pp-neue-montreal/PPNeueMontreal-Medium.woff2') format('woff2'),
+        url('./fonts/pp-neue-montreal/PPNeueMontreal-Medium.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PPNeueMontreal';
+    src: 
+        url('./fonts/pp-neue-montreal/PPNeueMontreal-Bold.woff2') format('woff2'),
+        url('./fonts/pp-neue-montreal/PPNeueMontreal-Bold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PPNeueMontrealMono';
+    src: 
+        url('./fonts/pp-neue-montreal-mono/PPNeueMontrealMono-Medium.woff2') format('woff2'),
+        url('./fonts/pp-neue-montreal-mono/PPNeueMontrealMono-Medium.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PPNeueMontrealMono';
+    src: 
+        url('./fonts/pp-neue-montreal-mono/PPNeueMontrealMono-Bold.woff2') format('woff2'),
+        url('./fonts/pp-neue-montreal-mono/PPNeueMontrealMono-Bold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--electro-magnetism);
+}
+

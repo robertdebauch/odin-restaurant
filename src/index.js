@@ -1,16 +1,27 @@
 import "./reset.css";
 import "./style.css";
 
-import { homepage } from "./home.js";
-import { about } from "./about.js";
-import { menupage } from "./menu.js";
-import { contact } from "./contact.js";
+import { createHomePage } from "./home.js";
+// import { about } from "./about.js";
+// import { menupage } from "./menu.js";
+// import { contact } from "./contact.js";
 
-function callPages() {
-    console.log(homepage);
-    console.log(about);
-    console.log(menupage);
-    console.log(contact);
+// function callPages() {
+//     console.log(homepage);
+//     console.log(about);
+//     console.log(menupage);
+//     console.log(contact);
+// }
+
+// callPages();
+
+const dynamicRenderer = document.querySelector('#content');
+
+function wipeOutContent() {
+    dynamicRenderer.innerHTML = '';
 }
 
-callPages();
+wipeOutContent();
+
+const homepageGrid = createHomePage();
+dynamicRenderer.appendChild(homepageGrid);

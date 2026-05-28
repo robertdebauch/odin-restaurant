@@ -31,6 +31,10 @@ export default {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource', // Это говорит Webpack: "Просто скопируй файл в dist и дай мне на него ссылку"
+            },
         ],
     },
 };

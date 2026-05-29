@@ -8,15 +8,10 @@ class ImageContainer {
         this.imageUrl = imageUrl;
         this.authorName = authorName;
         this.authorUrl = authorUrl;
-        // this.width = width;
-        // this.height = height;
     }
 
     createContainer() {
         const gridElement = document.createElement('div');
-
-        // gridElement.style.width = this.width;
-        // gridElement.style.height = this.height;
 
         gridElement.style.backgroundImage = `url(${this.imageUrl})`;
         gridElement.style.backgroundPosition = 'center';

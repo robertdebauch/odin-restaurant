@@ -3,6 +3,8 @@ import "./style.css";
 
 import { createHomePage } from "./home.js";
 import { createAboutPage } from "./about.js";
+import { createMenuPage } from "./menu.js";
+
 // import { about } from "./about.js";
 // import { menupage } from "./menu.js";
 // import { contact } from "./contact.js";
@@ -27,5 +29,8 @@ wipeOutContent();
 // const homepageGrid = createHomePage();
 // dynamicRenderer.appendChild(homepageGrid);
 
-const aboutPage = createAboutPage();
-dynamicRenderer.appendChild(aboutPage);
+// const aboutPage = createAboutPage();
+// dynamicRenderer.appendChild(aboutPage);
+
+const menuPage = createMenuPage();
+dynamicRenderer.appendChild(menuPage);

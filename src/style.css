@@ -1,7 +1,7 @@
 :root {
     --black-color: rgb(0, 0, 0);
-    --white-color: rgb(255,255,255);
-    --grey-color: rgb(65,65,65);
+    --white-color: rgb(255, 255, 255);
+    --grey-color: rgb(65, 65, 65);
     --electro-magnetism: rgb(84, 43, 255);
 
     --text-size-0: 0.625rem;
@@ -13,7 +13,7 @@
 
 @font-face {
     font-family: 'PPNeueMontreal';
-    src: 
+    src:
         url('./fonts/pp-neue-montreal/PPNeueMontreal-Medium.woff2') format('woff2'),
         url('./fonts/pp-neue-montreal/PPNeueMontreal-Medium.woff') format('woff');
     font-weight: 600;
@@ -22,7 +22,7 @@
 
 @font-face {
     font-family: 'PPNeueMontreal';
-    src: 
+    src:
         url('./fonts/pp-neue-montreal/PPNeueMontreal-Bold.woff2') format('woff2'),
         url('./fonts/pp-neue-montreal/PPNeueMontreal-Bold.woff') format('woff');
     font-weight: 800;
@@ -31,7 +31,7 @@
 
 @font-face {
     font-family: 'PPNeueMontrealMono';
-    src: 
+    src:
         url('./fonts/pp-neue-montreal-mono/PPNeueMontrealMono-Medium.woff2') format('woff2'),
         url('./fonts/pp-neue-montreal-mono/PPNeueMontrealMono-Medium.woff') format('woff');
     font-weight: 600;
@@ -40,7 +40,7 @@
 
 @font-face {
     font-family: 'PPNeueMontrealMono';
-    src: 
+    src:
         url('./fonts/pp-neue-montreal-mono/PPNeueMontrealMono-Bold.woff2') format('woff2'),
         url('./fonts/pp-neue-montreal-mono/PPNeueMontrealMono-Bold.woff') format('woff');
     font-weight: 800;
@@ -57,19 +57,21 @@ body {
     background-color: var(--white-color);
 }
 
-footer, header, #content {
+footer,
+header,
+#content {
     padding: var(--text-size-1);
 }
 
 /* HEADER */
 
 header {
-    height: 80px; /* hard */
+    height: 80px;
+    /* hard */
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    border-bottom: 1px solid red; /* temp */
 }
 
 header .headerText {
@@ -97,7 +99,7 @@ nav .menuBtn {
     font-size: var(--text-size-1);
     padding: .5rem 1rem;
 
-    transition: color .4s cubic-bezier(.17,.67,.83,.67);
+    transition: color .4s cubic-bezier(.17, .67, .83, .67);
 }
 
 nav .menuBtn:hover {
@@ -114,7 +116,6 @@ nav .menuBtn:hover {
 /* HOME PAGE */
 
 #content .image-grid {
-    border: 1px solid blue; /* temp */
     /* height: 100%; */
     flex-grow: 1;
     min-height: 1344px;
@@ -139,12 +140,12 @@ nav .menuBtn:hover {
     grid-row: 1 / 6;
 }
 
-.image-grid > div {
+.image-grid>div {
     display: grid;
     padding: 0.5rem;
 }
 
-.image-grid > div a {
+.image-grid>div a {
     /* position: absolute; */
     justify-self: end;
     color: var(--black-color);
@@ -154,19 +155,161 @@ nav .menuBtn:hover {
     transform: rotate(180deg);
     writing-mode: vertical-lr;
     text-transform: uppercase;
-    
+    letter-spacing: 5%;
+
     text-decoration: none;
 }
 
-.image-grid > div a:hover {
+.image-grid>div a:hover {
     text-decoration: line-through;
     text-decoration-thickness: 1rem;
+}
+
+/* ABOUT PAGE */
+.about-wrapper {
+    flex-grow: 1;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.about-wrapper .text-container,
+.about-wrapper .disclaimer-container {
+    flex-grow: 1;
+    display: grid;
+    gap: var(--text-size-1);
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.about-wrapper .text-container {
+    align-items: end;
+}
+
+.text-container .about-text,
+.text-container h2 {
+    font-family: 'PPNeueMontreal';
+    font-weight: 600;
+    font-size: var(--text-size-3);
+    line-height: 3.625rem;
+}
+
+.text-container .about-text {
+    color: var(--grey-color);
+    grid-column: 1 / 6;
+
+    text-align: right;
+}
+
+.text-container h2 {
+    color: var(--black-color);
+    grid-column: 6 / 9;
+}
+
+.about-wrapper .disclaimer-container {
+    align-items: center;
+}
+
+.disclaimer-container .disclaimer-text {
+
+    font-family: 'PPNeueMontreal';
+    font-weight: 600;
+    font-size: var(--text-size-2);
+    line-height: 2rem;
+    text-align: right;
+    color: var(--grey-color);
+
+    grid-column: 6 / 9;
+}
+
+.disclaimer-text .food {
+    color: var(--black-color);
+    font-weight: 800;
+}
+
+.disclaimer-text a {
+    color: var(--grey-color);
+    font-weight: 600;
+
+}
+
+.disclaimer-text a:hover {
+    text-decoration: line-through;
+    text-decoration-thickness: 2rem;
+    text-decoration-color: var(--black-color);
+}
+
+/* MENU PAGE */
+.menu-page-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-page-wrapper .menu-headline {
+    font-family: 'PPNeueMontreal';
+    font-weight: 800;
+    font-size: var(--text-size-4);
+    text-align: center;
+    width: 50%;
+    line-height: 8.875rem;
+    align-self: center;
+    margin: 4rem 0;
+}
+
+.menu-page-wrapper .bludo-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(calc(1340px/4), 1fr)); */
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--text-size-2);
+}
+
+.bludo-grid .bludo-grid-item {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.bludo-grid-item .bludo-picture {
+    aspect-ratio: 1 / 1; 
+    border: calc(var(--text-size-0) / 4) solid var(--grey-color);
+    transform: rotate(0deg);
+}
+
+.bludo-grid-item .bludo-picture:hover {
+    mix-blend-mode: hard-light;
+    transform: rotate(90deg);
+}
+
+.bludo-grid-item .bludo-name {
+    font-family: 'PPNeueMontrealMono';
+    font-weight: 600;
+    font-size: var(--text-size-0);
+    text-transform: uppercase;
+    letter-spacing: 5%;
+}
+
+.bludo-5 > .bludo-picture,
+.bludo-6 > .bludo-picture,
+.bludo-7 > .bludo-picture,
+.bludo-8 > .bludo-picture {
+    mix-blend-mode: difference;
+}
+
+
+.menu-page-wrapper .menu-bottom-text {
+    font-family: 'PPNeueMontreal';
+    font-weight: 600;
+    font-size: var(--text-size-3);
+    line-height: 3.625rem;
+    color: var(--grey-color);
+    grid-column: 1 / 3;
+
 }
 
 /* FOOTER */
 
 footer {
-    margin-top: 80px; /* hard */
+    margin-top: 80px;
+    /* hard */
     background-color: var(--grey-color);
 }
 

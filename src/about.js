@@ -28,7 +28,7 @@ export function createAboutPage() {
 
     const disclaimerAccent = document.createElement('span');
     disclaimerAccent.classList.add('food');
-    disclaimerAccent.textContent = "food ";
+    disclaimerAccent.textContent = "Food ";
 
     const disclaimerLink = document.createElement('a');
     disclaimerLink.href = "https://www.discogs.com/release/419623-Food-Last-Supper?srsltid=AfmBOop7snTkjbkYXhkioQ5xLEGRuq0_0O5AlTm1S0KDCt6LcsV6EXzm";
